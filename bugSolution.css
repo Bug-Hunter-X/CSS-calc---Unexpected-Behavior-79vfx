@@ -1,0 +1,33 @@
+/* bug.css */
+.parent {
+  width: 500px;
+}
+
+.child {
+  width: calc(100% - 10px);
+  background-color: lightblue;
+}
+
+/* bugSolution.css */
+.parent {
+  width: 500px;
+}
+
+.child {
+  width: calc(100% - 10px); /* Correct usage */
+  background-color: lightgreen; 
+}
+
+/*Example of complex calc() usage and solution*/
+.complexParent {
+  width: 500px;
+}
+.complexChild{
+  width: calc((100% - 20px)/2);/*Incorrect, will result in unintended outcomes*/
+  background-color: lightcoral;
+}
+
+.complexChildFixed {
+  width: calc(((100% - 20px) / 2)); /*Correct, with parenthesis to define order of operations*/
+  background-color: lightseagreen; 
+}
